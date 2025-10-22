@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    /* flex-direction: column;
+    flex-wrap: nowrap; */
+    position: relative;
+}
+
+
+/* card 2 */
+
+.card {
+  width: 190px;
+  height: 254px;
+  background: #07182E;
+  position: absolute;
+  top:150px;
+  left:600px;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card h2 {
+  z-index: 1;
+  color: white;
+  font-size: 1em;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+
+/* .card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */
+
+
+/* code - explain box */
+
+.code-editor{
+  max-width: 300px;
+  background-color: #1d1e22;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 2px;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin: 10px;
+}
+
+.title {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1.57px;
+  color: rgb(212 212 212);
+}
+
+.icon {
+  width: 20px;
+  transition: .2s ease;
+}
+
+.icon:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #6e7281;
+}
+
+.editor-content {
+  margin: 0 10px 10px;
+  color: white;
+}
+
+.property {
+  margin-left: 30px;
+}
+
+.property:hover {
+  cursor: text;
+}
+
+.editor-content .color-0 {
+  color: rgb(86 156 214);
+}
+
+.editor-content .color-1 {
+  color: rgb(182 206 168);
+}
+
+.editor-content .color-2 {
+  color: rgb(156 220 254);
+}
+
+.editor-content .color-3 {
+  color: rgb(207 146 120);
+}
+
+.color-preview-1,.color-preview-2 {
+  height: 8px;
+  width: 8px;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.color-preview-1 {
+  background-color: #1d1e22;
+}
+
+.color-preview-1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
